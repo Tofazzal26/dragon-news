@@ -6,6 +6,10 @@ import {
   FaInstagram,
 } from "react-icons/fa";
 
+import Q_zone1 from "../../assets/qZone1.png";
+import Q_zone2 from "../../assets/qZone2.png";
+import Q_zone3 from "../../assets/qZone3.png";
+
 const RightSideNav = () => {
   return (
     <div>
@@ -32,7 +36,7 @@ const RightSideNav = () => {
       </div>
 
       <div>
-        <h1 className="text-2xl font-semibold">Find Us On </h1>
+        <h1 className="text-2xl font-semibold my-6">Find Us On </h1>
         <div>
           <div className="border-2 rounded-t-md">
             <a className="flex items-center p-4 gap-4" href="">
@@ -76,6 +80,16 @@ const RightSideNav = () => {
               </span>
             </a>
           </div>
+        </div>
+      </div>
+
+      <div>
+        <h1 className="text-2xl font-semibold mt-6">Q-Zone</h1>
+
+        <div>
+          <img className="w-full" src={Q_zone1} alt="" />
+          <img className="w-full" src={Q_zone2} alt="" />
+          <img className="w-full" src={Q_zone3} alt="" />
         </div>
       </div>
     </div>
