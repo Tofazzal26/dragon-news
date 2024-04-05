@@ -53,8 +53,10 @@ const Navbar = () => {
               <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
             </div>
           </div>
-          <Link>
-            <button className="btn btn-active">Login</button>
+          <Link to="/login">
+            <button className="bg-[#403f3f] px-8 py-2 text-white font-semibold">
+              Login
+            </button>
           </Link>
         </div>
       </div>
