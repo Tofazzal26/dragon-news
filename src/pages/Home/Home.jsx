@@ -11,7 +11,7 @@ const Home = () => {
       <BreakingNews />
       <Navbar />
       <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-        <div className="border">
+        <div>
           <LeftSideNav />
         </div>
         <div className="border md:col-span-2">
