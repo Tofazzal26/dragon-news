@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 import Navbar from "../../Shared/Navbar/Navbar";
 
-const Login = () => {
-  const handleLogin = (e) => {
-    e.preventDefault();
+const Register = () => {
+  const handleRegister = (e) => {
+    e.eventDefault();
     const form = new FormData(e.currentTarget);
     console.log(form.get("password"));
   };
@@ -15,13 +15,30 @@ const Login = () => {
         <div className="bg-[#ffffff] mt-14 shadow-lg lg:w-1/2 md:w-3/4 mx-auto">
           <div className="md:w-3/4 lg:w-1/2 mx-auto py-14">
             <h1 className="font-semibold text-3xl text-center">
-              Login your account
+              Register your account
             </h1>
             <div className="divider"></div>
-            <form onSubmit={handleLogin}>
+            <form onSubmit={handleRegister}>
+              <label className="text-lg font-semibold ">Your Name</label>
+              <br />
+              <input
+                type="text"
+                name="name"
+                className="bg-[#f3f3f3] p-3 w-full my-4 rounded-sm outline-none text-[#9f9f9f]"
+                placeholder="Your Name"
+                required
+              />
+              <label className="text-lg font-semibold ">Photo URL</label>
+              <br />
+              <input
+                type="text"
+                name="photo"
+                className="bg-[#f3f3f3] p-3 w-full my-4 rounded-sm outline-none text-[#9f9f9f]"
+                placeholder="Enter your URL"
+                required
+              />
               <label className="text-lg font-semibold ">Email Address</label>
               <br />
-
               <input
                 type="email"
                 name="email"
@@ -40,13 +57,17 @@ const Login = () => {
                 required
               />
               <br />
+              <input type="checkbox" required name="check" />
+              <span className="text-[#706F6F] font-semibold ml-3">
+                Accept Term & Conditions
+              </span>
               <button className="bg-[#403f3f] text-xl rounded-sm p-2 w-full my-4 font-semibold text-white">
                 Login
               </button>
               <p className="font-semibold text-[#706f6f] text-center">
-                Do not Have An Account ?{" "}
-                <Link to="/register" className="text-[#fa6c57]">
-                  Register
+                You Have An Account ?{" "}
+                <Link to="/login" className="text-[#fa6c57]">
+                  Login
                 </Link>
               </p>
             </form>
@@ -57,4 +78,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Register;
